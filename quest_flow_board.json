@@ -1,0 +1,491 @@
+{
+  "groups": [
+    {
+      "id": "g-urgent",
+      "name": "Urgent Today",
+      "color": "#D85A30"
+    },
+    {
+      "id": "g-high",
+      "name": "High Priority",
+      "color": "#BA7517"
+    },
+    {
+      "id": "g-active",
+      "name": "In Progress",
+      "color": "#185FA5"
+    },
+    {
+      "id": "g-future",
+      "name": "Future / Pending",
+      "color": "#888780"
+    },
+    {
+      "id": "g-done",
+      "name": "Completed",
+      "color": "#1D9E75"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "t1",
+      "name": "TBE ส่งให้หมด + DDR ที่เหลือ",
+      "groupId": "g-urgent",
+      "priority": "urgent",
+      "dueDate": "22 May 2026",
+      "notes": "KPI: TBE ≤ 3 วัน, DDR ≤ 2 วัน — ต้องเคลียร์วันนี้",
+      "steps": [
+        {
+          "id": "s1",
+          "type": "step",
+          "name": "Clear งาน DDR ที่ยังค้างแล้วเป็น Not start",
+          "status": "pending"
+        },
+        {
+          "id": "_7641shf",
+          "type": "parallel",
+          "branches": [
+            {
+              "id": "_0h7icfd",
+              "name": "Valve สั่งมา Spec ไม่ตรงเพราะ TBE ผิดฉบับ",
+              "steps": [
+                {
+                  "id": "_iftjrnp",
+                  "type": "step",
+                  "name": "OC02 PO. 3400057667 ==> (INSP Report no. SIT2026-066)",
+                  "status": "pending"
+                },
+                {
+                  "id": "_06gyfpq",
+                  "type": "step",
+                  "name": "ส่งขอ Technical information จากพี่ติ๋ม",
+                  "status": "pending"
+                }
+              ]
+            },
+            {
+              "id": "_9rofbe3",
+              "name": "Branch B",
+              "steps": [
+                {
+                  "id": "_g1nu2ls",
+                  "type": "step",
+                  "name": "PO3400061889",
+                  "status": "pending"
+                },
+                {
+                  "id": "_hbnqrt3",
+                  "type": "step",
+                  "name": "ส่งไฟล์ Cer3.1แบบ Full ของ GMS ให้ Thomasmade เช็คให้",
+                  "status": "pending"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "_yo36vqt",
+          "type": "step",
+          "name": "Review list งาน TBE ที่ยังค้าง",
+          "status": "pending"
+        },
+        {
+          "id": "sg1",
+          "type": "parallel",
+          "branches": [
+            {
+              "id": "b1",
+              "name": "TBE Track",
+              "steps": [
+                {
+                  "id": "bs1",
+                  "name": "ให้ AI ช่วยกรอก TBE ให้",
+                  "status": "active"
+                },
+                {
+                  "id": "bs2",
+                  "name": "Review ",
+                  "status": "pending"
+                }
+              ]
+            },
+            {
+              "id": "b2",
+              "name": "DDR Track",
+              "steps": [
+                {
+                  "id": "bs3",
+                  "name": "ให้ AI Gen reason file ให้",
+                  "status": "active"
+                },
+                {
+                  "id": "bs4",
+                  "name": "Review",
+                  "status": "pending"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s3",
+          "type": "step",
+          "name": "Submit ทั้ง TBE + DDR ให้ครบ",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "t2",
+      "name": "เช็ค Spare งาน PSD ใน SAP",
+      "groupId": "g-urgent",
+      "priority": "urgent",
+      "dueDate": "ASAP",
+      "notes": "กลัวเบิกของไม่ทัน — ต้องรีบเช็กก่อนอื่น",
+      "steps": [
+        {
+          "id": "s10",
+          "type": "step",
+          "name": "เข้า SAP เช็ค Material อยู่ใน Stock ไหม",
+          "status": "active"
+        },
+        {
+          "id": "s11",
+          "type": "step",
+          "name": "Confirm Lead Time vs วันที่ต้องการ",
+          "status": "pending"
+        },
+        {
+          "id": "s12",
+          "type": "step",
+          "name": "ออก PR/PO ถ้าต้องสั่งซื้อ",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "t3",
+      "name": "สไลด์ให้พี่ SAN",
+      "groupId": "g-high",
+      "priority": "high",
+      "dueDate": "22 May 2026 (วันนี้)",
+      "notes": "AI gen structure ไว้แล้ว — ต้องเข้าไปเติม content + ตรวจทาน",
+      "steps": [
+        {
+          "id": "s20",
+          "type": "step",
+          "name": "AI generate slide structure",
+          "status": "done"
+        },
+        {
+          "id": "s21",
+          "type": "step",
+          "name": "เติม Content + ข้อมูลจริง",
+          "status": "active"
+        },
+        {
+          "id": "s22",
+          "type": "step",
+          "name": "ตรวจทาน + จัด Format",
+          "status": "pending"
+        },
+        {
+          "id": "s23",
+          "type": "step",
+          "name": "ส่งให้พี่ SAN",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "t4",
+      "name": "เบิกเงินก่อนสิ้นเดือน",
+      "groupId": "g-high",
+      "priority": "high",
+      "dueDate": "ก่อน 31 May",
+      "notes": "",
+      "steps": [
+        {
+          "id": "s30",
+          "type": "step",
+          "name": "เตรียมเอกสาร Claim",
+          "status": "active"
+        },
+        {
+          "id": "s31",
+          "type": "step",
+          "name": "Submit ผ่านระบบ",
+          "status": "pending"
+        },
+        {
+          "id": "s32",
+          "type": "step",
+          "name": "รอ Approval",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "t5",
+      "name": "งาน Stock others — ส่งให้ Stock Team",
+      "groupId": "g-high",
+      "priority": "high",
+      "dueDate": "ก่อน 31 May",
+      "notes": "Type \"others\" ใน List",
+      "steps": [
+        {
+          "id": "s40",
+          "type": "step",
+          "name": "รวบรวมข้อมูล Stock others",
+          "status": "active"
+        },
+        {
+          "id": "s41",
+          "type": "step",
+          "name": "Review + Verify",
+          "status": "pending"
+        },
+        {
+          "id": "s42",
+          "type": "step",
+          "name": "ส่งให้ Stock Team",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "t6",
+      "name": "เคลียร์ Folder Training",
+      "groupId": "g-active",
+      "priority": "medium",
+      "dueDate": "สัปดาห์นี้",
+      "notes": "เหลือขั้นตอนสุดท้าย — ทำหน้าปก Hyperlink",
+      "steps": [
+        {
+          "id": "s50",
+          "type": "step",
+          "name": "จัด Structure Folder",
+          "status": "done"
+        },
+        {
+          "id": "s51",
+          "type": "step",
+          "name": "Upload Content ทุก Sub-folder",
+          "status": "done"
+        },
+        {
+          "id": "s52",
+          "type": "step",
+          "name": "สร้างหน้าปก Hyperlink สำหรับ Access",
+          "status": "active"
+        },
+        {
+          "id": "s53",
+          "type": "step",
+          "name": "Test ลิงก์ทุกอัน",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "t7",
+      "name": "คุยพี่สด — Plan ไป GBN June",
+      "groupId": "g-active",
+      "priority": "medium",
+      "dueDate": "Plan Monday",
+      "notes": "ต้องถาม detail ว่าต้องเตรียมอะไรบ้าง",
+      "steps": [
+        {
+          "id": "s60",
+          "type": "step",
+          "name": "นัด Meeting กับพี่สด",
+          "status": "active"
+        },
+        {
+          "id": "s61",
+          "type": "step",
+          "name": "สอบถาม Scope งาน + ของที่ต้องเตรียม",
+          "status": "pending"
+        },
+        {
+          "id": "s62",
+          "type": "step",
+          "name": "จัด Checklist ก่อนไป GBN",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "t8",
+      "name": "เช็ค MESC ให้พี่เจริญ",
+      "groupId": "g-active",
+      "priority": "medium",
+      "dueDate": "TBD",
+      "notes": "",
+      "steps": [
+        {
+          "id": "s70",
+          "type": "step",
+          "name": "เช็ค MESC Code ใน System",
+          "status": "active"
+        },
+        {
+          "id": "s71",
+          "type": "step",
+          "name": "Report ผลให้พี่เจริญ",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "t9",
+      "name": "Milestone Lean Stock ให้พี่เอ",
+      "groupId": "g-future",
+      "priority": "low",
+      "dueDate": "10 June",
+      "notes": "ต้องคุยกับ Digital Team ก่อนว่าสรุปจะให้ทำยังไง",
+      "steps": [
+        {
+          "id": "s80",
+          "type": "step",
+          "name": "นัดคุย Digital Team",
+          "status": "active"
+        },
+        {
+          "id": "s81",
+          "type": "step",
+          "name": "Confirm Scope + Approach",
+          "status": "pending"
+        },
+        {
+          "id": "s82",
+          "type": "step",
+          "name": "จัด Milestone Document",
+          "status": "pending"
+        },
+        {
+          "id": "s83",
+          "type": "step",
+          "name": "ส่งให้พี่เอ",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "t10",
+      "name": "Clean Data Valveberry ก่อน Go-live",
+      "groupId": "g-future",
+      "priority": "low",
+      "dueDate": "ก่อน 1 Jun Go-live",
+      "notes": "ไม่เร่งด่วนแต่ควรทำก่อน Go-live",
+      "steps": [
+        {
+          "id": "s90",
+          "type": "step",
+          "name": "Audit ข้อมูลที่มีใน Valveberry",
+          "status": "active"
+        },
+        {
+          "id": "s91",
+          "type": "step",
+          "name": "Clean / Correct ข้อมูลผิดพลาด",
+          "status": "pending"
+        },
+        {
+          "id": "s92",
+          "type": "step",
+          "name": "Verify + Confirm พร้อม Go-live",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "t11",
+      "name": "เช็ครายชื่อ Valve GBN ให้พี่อ๋อง",
+      "groupId": "g-done",
+      "priority": "done",
+      "dueDate": "Done",
+      "notes": "",
+      "steps": [
+        {
+          "id": "sd1",
+          "type": "step",
+          "name": "รวบรวมรายชื่อ Valve GBN",
+          "status": "done"
+        },
+        {
+          "id": "sd2",
+          "type": "step",
+          "name": "ส่งให้พี่อ๋อง",
+          "status": "done"
+        }
+      ]
+    },
+    {
+      "id": "t12",
+      "name": "คุยพี่ตูน — ART Memguard Valve Correlation",
+      "groupId": "g-done",
+      "priority": "done",
+      "dueDate": "Done",
+      "notes": "KPI: ART Memguard Valve on track",
+      "steps": [
+        {
+          "id": "sd3",
+          "type": "step",
+          "name": "เตรียม Data Correlation",
+          "status": "done"
+        },
+        {
+          "id": "sd4",
+          "type": "step",
+          "name": "ประชุม + ตกลง Approach กับพี่ตูน",
+          "status": "done"
+        }
+      ]
+    },
+    {
+      "id": "_yfhyoue",
+      "name": "GBN PSD",
+      "groupId": "g-high",
+      "priority": "high",
+      "dueDate": "31 May 2026",
+      "notes": "",
+      "steps": [
+        {
+          "id": "_bxw5khm",
+          "type": "step",
+          "name": "New step",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "_3l2xpq7",
+      "name": "ทำ MOM ให้ S1",
+      "groupId": "g-active",
+      "priority": "high",
+      "dueDate": "22/05/2026",
+      "notes": "",
+      "steps": [
+        {
+          "id": "_x8aax0w",
+          "type": "step",
+          "name": "ส่ง Excel แบ่งงงาน",
+          "status": "pending"
+        },
+        {
+          "id": "_eqjy17p",
+          "type": "step",
+          "name": "ส่ง Vendor contact",
+          "status": "pending"
+        },
+        {
+          "id": "_x7grbzl",
+          "type": "step",
+          "name": "MOM ของมีตติ้งเมื่อเช้า",
+          "status": "pending"
+        }
+      ]
+    }
+  ]
+}
