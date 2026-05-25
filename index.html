@@ -216,5 +216,14 @@
 <script src="js/dashboard.js"></script>
 <script src="js/modal.js"></script>
 <script src="js/app.js"></script>
+
+<!-- สคริปต์จุดชนวนเรียกให้ระบบเริ่มทำงาน -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof App !== 'undefined' && App.init) {
+      App.init();
+    }
+  });
+</script>
 </body>
 </html>
